@@ -4,116 +4,92 @@
 
 | # | Mensaje del commit | Qué se hizo | Autor | Enlace |
 |---|--------------------|-------------|-------|--------|
-| 1 | `docs(boletin6): Completado el apartado A del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [9a31d58](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/9a31d58346e5dc57b619e41ef2a2f1c22b4608a1) |
-| 2 | `chore(despliegue): Declaramos las dependencias para que sea reproducible` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [22a99e2](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/22a99e2399f66e0f33361594fd02cc09122c648c) |
-| 3 | `docs(boletin6): Completado el apartado B del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [5cb44d7](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/5cb44d7ea2687798e82e8d206640a83f2a6b06c2) |
-| 4 | `docs(boletin6): Completado el apartado C del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [44e327e](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/44e327e2391ee5703bd6089fbd7547e9e3589566) |
-| 5 | `chore(ansible): Creación del inventario y verificación de la flota` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [79ff1ad](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/79ff1ad58cd1463412c7a7b69471b5e56186d176) |
-| 6 | `docs(boletin6): Completado apartado D del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [f6e9d2a](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/f6e9d2a900dc80c3b7f260cb51ca18b1412fb7fe) |
-| 7 | `chore(deploy): Creamos el fichero deploy.yml para el despliegue de la app` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [78dff02](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/78dff025278ff0e9175e1d5675de473daef34bee) |
-| 8 | `docs(boletin6): Completado apartado E y F` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [8bf40aa](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8bf40aa6352f69d9f7f4f8d2be4d977e315f622a) |
-| 9 | `chore(vault): Protegemos credenciales con Ansible Vault` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [2bce38c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/2bce38cb9310f6fb33487d66571af6e63f127ef5) |
+| 1 | `docs(boletin6): Completado el apartado A del boletin 6` | Se ha realizado el apartado A del boletin 6 | Jonathan Aleksander Llumitasig Chuquiana | [9a31d58](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/9a31d58346e5dc57b619e41ef2a2f1c22b4608a1) |
+| 2 | `chore(despliegue): Declaramos las dependencias para que sea reproducible` | Se instaló Ansible y `collection` de Ansible | Jonathan Aleksander Llumitasig Chuquiana | [22a99e2](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/22a99e2399f66e0f33361594fd02cc09122c648c) |
+| 3 | `docs(boletin6): Completado el apartado B del boletin 6` | Se ha realizado el apartado B del boletin 6 | Jonathan Aleksander Llumitasig Chuquiana | [5cb44d7](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/5cb44d7ea2687798e82e8d206640a83f2a6b06c2) |
+| 4 | `docs(boletin6): Completado el apartado C del boletin 6` | Se ha realizado el apartado C del boletin 6 | Jonathan Aleksander Llumitasig Chuquiana | [44e327e](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/44e327e2391ee5703bd6089fbd7547e9e3589566) |
+| 5 | `chore(ansible): Creación del inventario y verificación de la flota` | Se creó el `inventory.ini` | Jonathan Aleksander Llumitasig Chuquiana | [79ff1ad](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/79ff1ad58cd1463412c7a7b69471b5e56186d176) |
+| 6 | `docs(boletin6): Completado apartado D del boletin 6` | Se ha realizado el apartado D del boletin 6 | Jonathan Aleksander Llumitasig Chuquiana | [f6e9d2a](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/f6e9d2a900dc80c3b7f260cb51ca18b1412fb7fe) |
+| 7 | `chore(deploy): Creamos el fichero deploy.yml para el despliegue de la app` | Se creó el fichero `deploy.yml` para el despliegue | Jonathan Aleksander Llumitasig Chuquiana | [78dff02](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/78dff025278ff0e9175e1d5675de473daef34bee) |
+| 8 | `docs(boletin6): Completado apartado E y F` | Se ha realizado el apartado E y F del boletin 6 | Jonathan Aleksander Llumitasig Chuquiana | [8bf40aa](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8bf40aa6352f69d9f7f4f8d2be4d977e315f622a) |
+| 9 | `chore(vault): Protegemos credenciales con Ansible Vault` | Cifrar las credenciales del repositorio | Jonathan Aleksander Llumitasig Chuquiana | [2bce38c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/2bce38cb9310f6fb33487d66571af6e63f127ef5) |
+| 10 | `docs: parte g iniciada` | Realización del apartado g del boletín 6 | Javier García Cutillas | [8a55161](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8a5516161b4f68dc0d72e872764226977de44585) |
+| 11 | `docs: mejora del boletin 6` | Mejora en la documentación del boletín 6 | Javier García Cutillas | [76ac844](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/76ac844cdd6557e3c725c8dcc4237f2d0ae6bba3) |
+| 12 | `docs: finalización del apartado g del boletin 6` | Se ha comprobado el despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura | Javier García Cutillas | [no_se_sabe](url_al_commit) |
 
 ## Detalle por commit
 
 ### 1. `docs(boletin6): Completado el apartado A del boletin 6`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se ha realizado el apartado A del boletin 6 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte A - Instalar Ansible y sus dependencias
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 2. `chore(despliegue): Declaramos las dependencias para que sea reproducible`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se instaló Ansible y `collection` de Ansible que aporta los módulos de Docker y se declaró la dependencia en el `requirements.yml`.
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte A - Instalar Ansible y sus dependencias
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 3. `docs(boletin6): Completado el apartado B del boletin 6`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se ha realizado el apartado B del boletin 6 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte B - Preparar la flota de servidores destino
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 4. `docs(boletin6): Completado el apartado C del boletin 6`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se ha realizado el apartado C del boletin 6 y se creó el fichero `deploy/servidores/dockercompose.yml`. 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte C - El inventario
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 5. `chore(ansible): Creación del inventario y verificación de la flota`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se creó el `inventory.ini` y se verificó la conexión a la flota. 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte C - El inventario
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 6. `docs(boletin6): Completado apartado D del boletin 6`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se ha realizado el apartado D del boletin 6 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte D - El playbook de despliegue
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 7. `chore(deploy): Creamos el fichero deploy.yml para el despliegue de la app`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se creó el fichero `deploy.yml` para el despliegue. 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte D - El playbook de despliegue
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 8. `docs(boletin6): Completado apartado E y F`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se ha realizado el apartado E y F del boletin 6 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte E - Proteger las credenciales con Ansible Vault y Parte F - Ejecutar el despliegue a mano
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
-
-#### Prompt
-```bash
-prompt
-```
+- **Uso de IA:** No se ha usado
 
 ### 9. `chore(vault): Protegemos credenciales con Ansible Vault`
-- **Qué se hizo:** se_hizo_algo 
+- **Qué se hizo:** Se utiliza Ansible Vault para cifrar las credenciales del repositorio y se comprueba con `cat` que está cifrado. 
 - **Autor:** Jonathan Aleksander Llumitasig Chuquiana
 - **Relación con el boletín:** Parte E - Proteger las credenciales con Ansible Vault
-- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+- **Uso de IA:** No se ha usado
 
-#### Prompt
-```bash
-prompt
-```
+### 10. `docs: parte g iniciada`
+- **Qué se hizo:** Realización del apartado g del boletín 6. 
+- **Autor:** Javier García Cutillas
+- **Relación con el boletín:** Parte G - Disparar el despliegue desde GitHub Actions (cierre CD)
+- **Uso de IA:** No se ha usado
+
+### 11. `docs: mejora del boletin 6`
+- **Qué se hizo:** Mejora en la documentación del boletín 6. 
+- **Autor:** Javier García Cutillas
+- **Relación con el boletín:** Parte G - Disparar el despliegue desde GitHub Actions (cierre CD)
+- **Uso de IA:** No se ha usado
+
+### 12. `docs: finalización del apartado g del boletin 6`
+- **Qué se hizo:** Se ha realizado la comprobación completa del despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura al completo. 
+- **Autor:** Javier García Cutillas
+- **Relación con el boletín:** Parte G - Disparar el despliegue desde GitHub Actions (cierre CD)
+- **Uso de IA:** No se ha usado
 
 ## Descripción narrativa de lo hecho en la sesión y relación con los commits
 
@@ -386,7 +362,7 @@ ok: [db1]
 TASK [Base de datos PostgreSQL] **************************************************************************************************************************************
 changed: [db1]
 
-PLAY [Desplegar la API de tareas] ************************************************************************************************************************************
+PLAY [Desplegar la API de libros] ************************************************************************************************************************************
 
 TASK [Gathering Facts] ***********************************************************************************************************************************************
 ok: [app1]
@@ -452,7 +428,7 @@ ok: [db1]
 TASK [Base de datos PostgreSQL] ***********************************************************************************************************************************
 ok: [db1]
 
-PLAY [Desplegar la API de tareas] *********************************************************************************************************************************
+PLAY [Desplegar la API de libros] *********************************************************************************************************************************
 
 TASK [Gathering Facts] ********************************************************************************************************************************************
 ok: [app1]
@@ -510,7 +486,7 @@ ok: [db1]
 TASK [Base de datos PostgreSQL] ***********************************************************************************************************************************
 ok: [db1]
 
-PLAY [Desplegar la API de tareas] *********************************************************************************************************************************
+PLAY [Desplegar la API de libros] *********************************************************************************************************************************
 
 TASK [Gathering Facts] ********************************************************************************************************************************************
 ok: [app1]
@@ -624,9 +600,13 @@ Y observamos que el rollback para volver a la `v1.0.0` tarda menos de un minuto,
 ### Parte G - Disparar el despliegue desde GitHub Actions (cierre CD)
 
 #### G.1 - Registrar tu ordenador como runner
+Para registrar mi ordenador como runner en el repositorio se accede a Settings → Actions → Runners → New self-hosted runner y se elige Linux.
+
 ![Runners](boletin6-parte-g-runners.png)
 
 #### G.2 - Entorno protegido y secreto del Vault
+Para crear el entorno protegido y el secreto del Vault se accede a Settings → Environments → New environment, se establece el nombre de  `produccion` y se añade al menos un Required reviewer.
+
 ![Idle](boletin6-parte-g-idle.png)
 ![Environments](boletin-6-environments.png)
 
@@ -709,4 +689,86 @@ jobs:
 ```
 
 #### G.4 - Pruébalo de extremo a extremo
+Se levanta el runner y se publica una nueva versión. Esto lanza el workflow de `publish`. Al finalizar, `deploy` se queda esperando una aprobación y, cuando se acepta, el runner recibe el trabajo.
 
+![Deploy Waiting](boletin6-deploy-waiting.png)
+![Deploy Waiting](boletin6-review-deployments.png)
+![Deploy Waiting](boletin6-ejecucion-curls.png)
+
+```mermaid
+flowchart TB
+    DEV["Desarrollador<br/>git push vX.Y.Z"]
+
+    subgraph CLOUD["GITHUB"]
+        REPO["Repositorio GitHub (Código fuente + deploy/)"]
+        ACTIONS["GitHub Actions (Workflow release.yml)"]
+
+        subgraph PUBLISH["1. JOB PUBLISH (ubuntu-latest)"]
+            BUILD["Construcción de imagen Docker"]
+            TOKEN["GITHUB_TOKEN"]
+        end
+
+        GHCR[("GHCR<br/>ghcr.io/jgarciacutillas/practicas-continuas-26-27<br/>Imagen: X.Y.Z")]
+
+        subgraph ENV["Entorno protegido: produccion"]
+            APPROVAL["Aprobación manual<br/>Required reviewer"]
+            SECRET["Secret VAULT_PASS<br/>Contraseña de Ansible Vault"]
+        end
+    end
+
+    subgraph HOST["TU ORDENADOR (ANFITRIÓN FÍSICO)"]
+        RUNNER["Runner autoalojado<br/>GitHub Actions"]
+        ANSIBLE["Ansible<br/>Controlador<br/>(deploy.yml + inventory.ini)"]
+        VAULT["Ansible Vault<br/>vault.yml cifrado"]
+
+        subgraph OUTERDOCKER["Docker del anfitrión (docker-compose)"]
+            subgraph APP1["Contenedor (app1)"]
+                SSH1["Servidor SSH"]
+                D1["Docker interno<br/>dockerd"]
+                API1["Spring Boot API (books-api)<br/>Puerto: 8081:8080"]
+            end
+
+            subgraph APP2["Contenedor (app2)"]
+                SSH2["Servidor SSH"]
+                D2["Docker interno<br/>dockerd"]
+                API2["Spring Boot API (books-api)<br/>Puerto: 8082:8080"]
+            end
+
+            subgraph DB1["Contenedor (db1)"]
+                SSH3["Servidor SSH"]
+                D3["Docker interno<br/>dockerd"]
+                DB[("PostgreSQL 16 (books)")]
+            end
+        end
+    end
+
+    DEV -->|"1. git push"| REPO
+    REPO -->|"2. Dispara workflow"| ACTIONS
+    ACTIONS --> PUBLISH
+    TOKEN -->|"3. Autenticación (HTTPS)"| GHCR
+    BUILD -->|"4. docker push (HTTPS)"| GHCR
+
+    ACTIONS -->|"5. Job deploy: espera aprobación"| ENV
+    APPROVAL -->|"6. Aprobación manual"| RUNNER
+    SECRET -.->|"7. secret del entorno (SSH)"| RUNNER
+
+    RUNNER -->|"8. Ejecuta el playbook"| ANSIBLE
+    VAULT -.->|"Credenciales cifradas"| ANSIBLE
+
+    ANSIBLE -->|"9. SSH :2223"| SSH1
+    ANSIBLE -->|"9. SSH :2224"| SSH2
+    ANSIBLE -->|"9. SSH :2225"| SSH3
+
+    SSH1 --> D1
+    SSH2 --> D2
+    SSH3 --> D3
+
+    ANSIBLE -->|"10. docker pull (HTTPS)"| GHCR
+
+    D1 --> API1
+    D2 --> API2
+    D3 --> DB
+
+    API1 -->|"11. PostgreSQL :5432"| DB
+    API2 -->|"11. PostgreSQL :5432"| DB
+```
