@@ -15,7 +15,7 @@
 | 9 | `chore(vault): Protegemos credenciales con Ansible Vault` | Cifrar las credenciales del repositorio | Jonathan Aleksander Llumitasig Chuquiana | [2bce38c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/2bce38cb9310f6fb33487d66571af6e63f127ef5) |
 | 10 | `docs: parte g iniciada` | Realización del apartado g del boletín 6 | Javier García Cutillas | [8a55161](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8a5516161b4f68dc0d72e872764226977de44585) |
 | 11 | `docs: mejora del boletin 6` | Mejora en la documentación del boletín 6 | Javier García Cutillas | [76ac844](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/76ac844cdd6557e3c725c8dcc4237f2d0ae6bba3) |
-| 12 | `docs: finalización del apartado g del boletin 6` | Se ha comprobado el despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura | Javier García Cutillas | [no_se_sabe](url_al_commit) |
+| 12 | `docs: finalización del apartado g del boletin 6` | Se ha comprobado el despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura | Javier García Cutillas | [8a522b6](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8a522b6905db2b9c7e8c35d7082da63a82efeae4) |
 
 ## Detalle por commit
 
@@ -693,82 +693,5 @@ Se levanta el runner y se publica una nueva versión. Esto lanza el workflow de 
 
 ![Deploy Waiting](boletin6-deploy-waiting.png)
 ![Deploy Waiting](boletin6-review-deployments.png)
-![Deploy Waiting](boletin6-ejecucion-curls.png)
-
-```mermaid
-flowchart TB
-    DEV["Desarrollador<br/>git push vX.Y.Z"]
-
-    subgraph CLOUD["GITHUB"]
-        REPO["Repositorio GitHub (Código fuente + deploy/)"]
-        ACTIONS["GitHub Actions (Workflow release.yml)"]
-
-        subgraph PUBLISH["1. JOB PUBLISH (ubuntu-latest)"]
-            BUILD["Construcción de imagen Docker"]
-            TOKEN["GITHUB_TOKEN"]
-        end
-
-        GHCR[("GHCR<br/>ghcr.io/jgarciacutillas/practicas-continuas-26-27<br/>Imagen: X.Y.Z")]
-
-        subgraph ENV["Entorno protegido: produccion"]
-            APPROVAL["Aprobación manual<br/>Required reviewer"]
-            SECRET["Secret VAULT_PASS<br/>Contraseña de Ansible Vault"]
-        end
-    end
-
-    subgraph HOST["TU ORDENADOR (ANFITRIÓN FÍSICO)"]
-        RUNNER["Runner autoalojado<br/>GitHub Actions"]
-        ANSIBLE["Ansible<br/>Controlador<br/>(deploy.yml + inventory.ini)"]
-        VAULT["Ansible Vault<br/>vault.yml cifrado"]
-
-        subgraph OUTERDOCKER["Docker del anfitrión (docker-compose)"]
-            subgraph APP1["Contenedor (app1)"]
-                SSH1["Servidor SSH"]
-                D1["Docker interno<br/>dockerd"]
-                API1["Spring Boot API (books-api)<br/>Puerto: 8081:8080"]
-            end
-
-            subgraph APP2["Contenedor (app2)"]
-                SSH2["Servidor SSH"]
-                D2["Docker interno<br/>dockerd"]
-                API2["Spring Boot API (books-api)<br/>Puerto: 8082:8080"]
-            end
-
-            subgraph DB1["Contenedor (db1)"]
-                SSH3["Servidor SSH"]
-                D3["Docker interno<br/>dockerd"]
-                DB[("PostgreSQL 16 (books)")]
-            end
-        end
-    end
-
-    DEV -->|"1. git push"| REPO
-    REPO -->|"2. Dispara workflow"| ACTIONS
-    ACTIONS --> PUBLISH
-    TOKEN -->|"3. Autenticación (HTTPS)"| GHCR
-    BUILD -->|"4. docker push (HTTPS)"| GHCR
-
-    ACTIONS -->|"5. Job deploy: espera aprobación"| ENV
-    APPROVAL -->|"6. Aprobación manual"| RUNNER
-    SECRET -.->|"7. secret del entorno (SSH)"| RUNNER
-
-    RUNNER -->|"8. Ejecuta el playbook"| ANSIBLE
-    VAULT -.->|"Credenciales cifradas"| ANSIBLE
-
-    ANSIBLE -->|"9. SSH :2223"| SSH1
-    ANSIBLE -->|"9. SSH :2224"| SSH2
-    ANSIBLE -->|"9. SSH :2225"| SSH3
-
-    SSH1 --> D1
-    SSH2 --> D2
-    SSH3 --> D3
-
-    ANSIBLE -->|"10. docker pull (HTTPS)"| GHCR
-
-    D1 --> API1
-    D2 --> API2
-    D3 --> DB
-
-    API1 -->|"11. PostgreSQL :5432"| DB
-    API2 -->|"11. PostgreSQL :5432"| DB
-```
+![Deploy Curls](boletin6-ejecucion-curls.png)
+![Diagrama](boletin6-diagrama.png)
