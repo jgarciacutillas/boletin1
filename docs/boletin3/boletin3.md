@@ -348,17 +348,71 @@ Primero hay que iniciar sesión en docker por terminal utilizando usuario y cont
 
 ### Parte I - Entorno de pruebas reproducible (no modifica el repositorio)
 
-1. Se utilizó el repositorio [Spring Petclinic](https://github.com/spring-projects/spring-petclinic)
+#### 1. Repositorio seleccionado
+Se utilizó el repositorio [request](https://github.com/psf/requests)
 
 ![Repositorio externo](boletin3-repo-externo.png)
 
-2. Se identificó los requisitos
+#### 2. Identificación de requisitos
+He seleccionado la versión v2.34.2, publicada el 14 de mayo de 2026. Esto permite fijar una versión concreta y evitar que futuras modificaciones de main cambien el comportamiento del entorno.
 
 | Elemento | Requisito o herramienta |
 |----------|-------------------------|
-| Lenguaje | Java |
-| Versión de Java |	Java 8 como versión objetivo; usaremos JDK 21 en el contenedor |
-| Gestor de dependencias |	Maven	|
-| Pruebas	| JUnit Jupiter, JUnit Pioneer y EasyMock, entre otras |
-| Compilación y tests |	Maven Compiler y Maven Surefire |
-| Dependencias del sistema | JDK y Maven |
+| Lenguaje | Python |
+| Versión de Python | Python 3.12 |
+| Gestor de dependencias | pip |
+| Sistema de construcción | setuptools |
+| Ejecutor de tests	| pytest |
+| Automatización | GNU Make |
+| Dependencias de desarrollo | `requirements-dev.txt` |
+| Sistema base | Linux(Debian Slim) |
+
+
+#### 3. Creamos el `Dockerfile` para instalar las dependecias necesarias.
+Creamos el `Dockerfile` para instalar las dependencias necesarias y para clonar el repositorio asi como ejecutar la bateria de pruebas
+
+```dockerfile
+
+FROM python:3.12-slim
+
+# Instalar herramientas del sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    make \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Directorio de trabajo
+WORKDIR /opt
+
+# Descargar versión concreta del proyecto
+RUN git clone --depth 1 --branch v2.34.2 \
+    https://github.com/psf/requests.git
+
+WORKDIR /opt/requests
+
+# Instalar dependencias de desarrollo y testing
+RUN python -m pip install --upgrade pip \
+    && make
+
+# Ejecutar la batería de pruebas
+CMD ["make", "ci"]
+
+```
+#### 4. Contruimos la imagen y ejecutamos los test
+
+Una vez que ya hemos creado el Dockerfile lanzamos el siguiente comando para construir la imagen docker, teniendo en cuenta que estamos dentro del directorio, que hemos aislado previamente del proyecto, junto con el docker file.
+```bash
+docker build -t requests-tests .
+```
+Y lanzamos la ejecución del contenedor, de manera que cuando termine de ejecutarse, se elimine el contenedor
+```bash
+docker run --rm requests-tests
+```
+Y obtenemos el siguiente resultado.
+
+```bash
+----------------- generated xml file: /opt/requests/report.xml -----------------
+====== 617 passed, 15 skipped, 1 xfailed, 18 warnings in 81.77s (0:01:21) ======
+```
+De manera que los tests se han ejecutado correctamente, donde se han omitodo 15 tests y se ha generado 1 fallo esperado en la bateria de tests, por lo que se considera que el contenedor ha pasado todos los tests de la manera que se esperaba.
