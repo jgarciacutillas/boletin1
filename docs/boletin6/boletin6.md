@@ -15,7 +15,7 @@
 | 9 | `chore(vault): Protegemos credenciales con Ansible Vault` | Cifrar las credenciales del repositorio | Jonathan Aleksander Llumitasig Chuquiana | [2bce38c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/2bce38cb9310f6fb33487d66571af6e63f127ef5) |
 | 10 | `docs: parte g iniciada` | Realización del apartado g del boletín 6 | Javier García Cutillas | [8a55161](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8a5516161b4f68dc0d72e872764226977de44585) |
 | 11 | `docs: mejora del boletin 6` | Mejora en la documentación del boletín 6 | Javier García Cutillas | [76ac844](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/76ac844cdd6557e3c725c8dcc4237f2d0ae6bba3) |
-| 12 | `docs: finalización del apartado g del boletin 6` | Se ha comprobado el despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura | Javier García Cutillas | [no_se_sabe](url_al_commit) |
+| 12 | `docs: finalización del apartado g del boletin 6` | Se ha comprobado el despliegue desde GitHub Actions y se ha realizado el diagrama de la arquitectura | Javier García Cutillas | [8a522b6](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8a522b6905db2b9c7e8c35d7082da63a82efeae4) |
 
 ## Detalle por commit
 
