@@ -4,22 +4,110 @@
 
 | # | Mensaje del commit | Qué se hizo | Autor | Enlace |
 |---|--------------------|-------------|-------|--------|
-| 1 | `commit` | se_hizo_algo | nombre | [hash_commit](url) |
-| 2 | `commit` | se_hizo_algo | nombre | [hash_commit](url) |
-| 3 | `commit` | se_hizo_algo | nombre | [hash_commit](url) |
+| 1 | `docs(boletin6): Completado el apartado A del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [9a31d58](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/9a31d58346e5dc57b619e41ef2a2f1c22b4608a1) |
+| 2 | `chore(despliegue): Declaramos las dependencias para que sea reproducible` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [22a99e2](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/22a99e2399f66e0f33361594fd02cc09122c648c) |
+| 3 | `docs(boletin6): Completado el apartado B del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [5cb44d7](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/5cb44d7ea2687798e82e8d206640a83f2a6b06c2) |
+| 4 | `docs(boletin6): Completado el apartado C del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [44e327e](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/44e327e2391ee5703bd6089fbd7547e9e3589566) |
+| 5 | `chore(ansible): Creación del inventario y verificación de la flota` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [79ff1ad](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/79ff1ad58cd1463412c7a7b69471b5e56186d176) |
+| 6 | `docs(boletin6): Completado apartado D del boletin 6` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [f6e9d2a](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/f6e9d2a900dc80c3b7f260cb51ca18b1412fb7fe) |
+| 7 | `chore(deploy): Creamos el fichero deploy.yml para el despliegue de la app` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [78dff02](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/78dff025278ff0e9175e1d5675de473daef34bee) |
+| 8 | `docs(boletin6): Completado apartado E y F` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [8bf40aa](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8bf40aa6352f69d9f7f4f8d2be4d977e315f622a) |
+| 9 | `chore(vault): Protegemos credenciales con Ansible Vault` | se_hizo_algo | Jonathan Aleksander Llumitasig Chuquiana | [2bce38c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/2bce38cb9310f6fb33487d66571af6e63f127ef5) |
 
 ## Detalle por commit
 
-### 1. `mensaje_del_commit`
+### 1. `docs(boletin6): Completado el apartado A del boletin 6`
 - **Qué se hizo:** se_hizo_algo 
-- **Autor:** nombre
-- **Relación con el boletín:** parte_z_hola
-- **Uso de IA:** no_se_ha_usado
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte A - Instalar Ansible y sus dependencias
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
 
-### 2. `mensaje_del_commit`
+#### Prompt
+```bash
+prompt
+```
+
+### 2. `chore(despliegue): Declaramos las dependencias para que sea reproducible`
 - **Qué se hizo:** se_hizo_algo 
-- **Autor:** nombre
-- **Relación con el boletín:** parte_z_hola
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte A - Instalar Ansible y sus dependencias
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 3. `docs(boletin6): Completado el apartado B del boletin 6`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte B - Preparar la flota de servidores destino
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 4. `docs(boletin6): Completado el apartado C del boletin 6`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte C - El inventario
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 5. `chore(ansible): Creación del inventario y verificación de la flota`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte C - El inventario
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 6. `docs(boletin6): Completado apartado D del boletin 6`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte D - El playbook de despliegue
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 7. `chore(deploy): Creamos el fichero deploy.yml para el despliegue de la app`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte D - El playbook de despliegue
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 8. `docs(boletin6): Completado apartado E y F`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte E - Proteger las credenciales con Ansible Vault y Parte F - Ejecutar el despliegue a mano
+- **Uso de IA:** ia_usada_chatgpt_claude_gemini
+
+#### Prompt
+```bash
+prompt
+```
+
+### 9. `chore(vault): Protegemos credenciales con Ansible Vault`
+- **Qué se hizo:** se_hizo_algo 
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte E - Proteger las credenciales con Ansible Vault
 - **Uso de IA:** ia_usada_chatgpt_claude_gemini
 
 #### Prompt
@@ -39,15 +127,15 @@ Y comprobamos que se instaló de forma correcta.
 
 ```bash
 $ ansible --version
-ansible [core 2.20.1]
+ansible [core 2.16.3]
   config file = None
-  configured module search path = ['/home/jonathan/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  configured module search path = ['/home/javier/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python3/dist-packages/ansible
-  ansible collection location = /home/jonathan/.ansible/collections:/usr/share/ansible/collections
+  ansible collection location = /home/javier/.ansible/collections:/usr/share/ansible/collections
   executable location = /usr/bin/ansible
-  python version = 3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0] (/usr/bin/python3)
-  jinja version = 3.1.6
-  pyyaml version = 6.0.3 (with libyaml v0.2.5)
+  python version = 3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0] (/usr/bin/python3)
+  jinja version = 3.1.2
+  libyaml = True
 ```
 Y finalmente instalamos la collection que aporta los modulos de Docker
 ```bash
@@ -534,4 +622,91 @@ sys     0m2.737s
 Y observamos que el rollback para volver a la `v1.0.0` tarda menos de un minuto, en este caso 34 segundos.
 
 ### Parte G - Disparar el despliegue desde GitHub Actions (cierre CD)
+
+#### G.1 - Registrar tu ordenador como runner
+![Runners](boletin6-parte-g-runners.png)
+
+#### G.2 - Entorno protegido y secreto del Vault
+![Idle](boletin6-parte-g-idle.png)
+![Environments](boletin-6-environments.png)
+
+#### G.3 - Ampliar el release.yml
+Se ha ampliado el workflow `release.yml`
+
+```yml
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+    tags: [ "v*.*.*" ]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      version: ${{ steps.meta.outputs.version }}   # NUEVO: 1.0.0 cuando el tag es v1.0.0
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Login en GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Metadatos (tags)
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          tags: |
+            type=sha,prefix=sha-
+            type=semver,pattern={{version}}
+            type=semver,pattern={{major}}.{{minor}}
+            type=semver,pattern={{major}}
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Construir y publicar
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  # NUEVO: todo lo que sigue es lo que añades en esta parte
+  deploy:
+    needs: publish                                  # solo si la imagen se publicó bien
+    # solo al publicar una versión (tag vX.Y.Z), no en cada push a main
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: self-hosted                            # tu ordenador
+    environment: produccion                         # se detiene aquí hasta que un reviewer lo apruebe
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar la collection de Ansible
+        run: ansible-galaxy collection install -r deploy/requirements.yml
+
+      - name: Desplegar con Ansible
+        env:
+          VAULT_PASS: ${{ secrets.VAULT_PASS }}
+          VERSION: ${{ needs.publish.outputs.version }}
+        run: |
+          VAULT_FILE="$(mktemp)"
+          trap 'rm -f "$VAULT_FILE"' EXIT
+          printf '%s' "$VAULT_PASS" > "$VAULT_FILE"
+          ansible-playbook -i deploy/inventory.ini deploy/deploy.yml \
+            --vault-password-file "$VAULT_FILE" \
+            --extra-vars "version_app=$VERSION"
+```
+
+#### G.4 - Pruébalo de extremo a extremo
 
