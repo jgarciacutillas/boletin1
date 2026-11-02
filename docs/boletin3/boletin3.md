@@ -11,6 +11,7 @@
 | 5 | `chore(docker): creación del fichero .env y configuración de docker compose` | Creación del archivo `.env` sin versionar para que sustituya las expresiones `${VARIABLE}` para utilizar las credenciales  | Jonathan Aleksander Llumitasig Chuquiana | [27dac0c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/27dac0c89dd60ad7242ea555e4483dc086952eec) |
 | 6 | `chore(dev): instalacion de devContainer` | Instalación de Dev Container | Jonathan Aleksander Llumitasig Chuquiana | [8f62e4f](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8f62e4fd73f667e1065271a6f857244bee3702ff) |
 | 7 | `docs(readme): documentacion sobre el arranque en Docker y DevContainer` | Documentacion sobre arranque con Docker y DevContainer | Jonathan Aleksander Llumitasig Chuquiana | [404dccb](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/404dccb1b5219fc2399bf46850ca4a51e1600b0f) |
+| 8 | `docs(boletin3): Completado apartado I del boletin 3` | Completado el apartado I del boletin 3 | Jonathan Aleksander Llumitasig Chuquiana | [6fb2dec](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/6fb2dec5d31da50dd0350a596609a00af47624f4) |
 
 
 ## Detalle por commit
@@ -166,6 +167,25 @@ git config core.hooksPath .githooks
 \`\`\`
 
 Dime que apartados añadirias para indicar como arrancar la aplicacion con Docker y DevContainer
+```
+
+### 8. `docs(boletin3): Completado apartado I del boletin 3`
+- **Qué se hizo:** Se completa el apartado I del boletin 3.
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte I - Entorno de pruebas reproducible (no modifica el repositorio)
+- **Uso de IA:** ChatGPT
+
+
+```bash
+Parte I — Entorno de pruebas reproducible (no modifica el repositorio)
+Esta parte no debe modificar el repositorio del proyecto. Escoge un repositorio open source de GitHub no trivial que tenga una batería de tests y genera un Dockerfile que levante un contenedor con todo lo necesario para ejecutar los tests de ese proyecto. Los pasos a seguir y documentar (en la memoria boletin3.md) son:
+
+Elegir repositorio. Selecciona un repositorio open-source popular y público (con >1k de estrellas o uso real).
+Analizar requisitos. Identifica lenguaje, versión/es, gestor de paquetes, herramientas de build y cualquier dependencia del sistema. Cita la fuente (README, docs oficiales, pyproject.toml, package.json, pom.xml, etc.).
+Crear Dockerfile. Escribe un Dockerfile que instale todas las dependencias y herramientas necesarias para ejecutar los tests del proyecto.
+Construir y ejecutar. Construye la imagen y ejecuta los tests dentro del contenedor, asegurándote de que todos pasan correctamente.
+
+Busca un repositorio publico que cumpla con todas estas condiciones
 ```
 
 ## Descripción narrativa de lo hecho en la sesión y relación con los commits
