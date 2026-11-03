@@ -11,6 +11,7 @@
 | 5 | `chore(docker): creación del fichero .env y configuración de docker compose` | Creación del archivo `.env` sin versionar para que sustituya las expresiones `${VARIABLE}` para utilizar las credenciales  | Jonathan Aleksander Llumitasig Chuquiana | [27dac0c](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/27dac0c89dd60ad7242ea555e4483dc086952eec) |
 | 6 | `chore(dev): instalacion de devContainer` | Instalación de Dev Container | Jonathan Aleksander Llumitasig Chuquiana | [8f62e4f](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/8f62e4fd73f667e1065271a6f857244bee3702ff) |
 | 7 | `docs(readme): documentacion sobre el arranque en Docker y DevContainer` | Documentacion sobre arranque con Docker y DevContainer | Jonathan Aleksander Llumitasig Chuquiana | [404dccb](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/404dccb1b5219fc2399bf46850ca4a51e1600b0f) |
+| 8 | `docs(boletin3): Completado apartado I del boletin 3` | Completado el apartado I del boletin 3 | Jonathan Aleksander Llumitasig Chuquiana | [6fb2dec](https://github.com/jgarciacutillas/practicas-continuas-26-27/commit/6fb2dec5d31da50dd0350a596609a00af47624f4) |
 
 
 ## Detalle por commit
@@ -166,6 +167,25 @@ git config core.hooksPath .githooks
 \`\`\`
 
 Dime que apartados añadirias para indicar como arrancar la aplicacion con Docker y DevContainer
+```
+
+### 8. `docs(boletin3): Completado apartado I del boletin 3`
+- **Qué se hizo:** Se completa el apartado I del boletin 3.
+- **Autor:** Jonathan Aleksander Llumitasig Chuquiana
+- **Relación con el boletín:** Parte I - Entorno de pruebas reproducible (no modifica el repositorio)
+- **Uso de IA:** ChatGPT
+
+
+```bash
+Parte I — Entorno de pruebas reproducible (no modifica el repositorio)
+Esta parte no debe modificar el repositorio del proyecto. Escoge un repositorio open source de GitHub no trivial que tenga una batería de tests y genera un Dockerfile que levante un contenedor con todo lo necesario para ejecutar los tests de ese proyecto. Los pasos a seguir y documentar (en la memoria boletin3.md) son:
+
+Elegir repositorio. Selecciona un repositorio open-source popular y público (con >1k de estrellas o uso real).
+Analizar requisitos. Identifica lenguaje, versión/es, gestor de paquetes, herramientas de build y cualquier dependencia del sistema. Cita la fuente (README, docs oficiales, pyproject.toml, package.json, pom.xml, etc.).
+Crear Dockerfile. Escribe un Dockerfile que instale todas las dependencias y herramientas necesarias para ejecutar los tests del proyecto.
+Construir y ejecutar. Construye la imagen y ejecuta los tests dentro del contenedor, asegurándote de que todos pasan correctamente.
+
+Busca un repositorio publico que cumpla con todas estas condiciones
 ```
 
 ## Descripción narrativa de lo hecho en la sesión y relación con los commits
@@ -348,17 +368,71 @@ Primero hay que iniciar sesión en docker por terminal utilizando usuario y cont
 
 ### Parte I - Entorno de pruebas reproducible (no modifica el repositorio)
 
-1. Se utilizó el repositorio [Spring Petclinic](https://github.com/spring-projects/spring-petclinic)
+#### 1. Repositorio seleccionado
+Se utilizó el repositorio [request](https://github.com/psf/requests)
 
 ![Repositorio externo](boletin3-repo-externo.png)
 
-2. Se identificó los requisitos
+#### 2. Identificación de requisitos
+He seleccionado la versión v2.34.2, publicada el 14 de mayo de 2026. Esto permite fijar una versión concreta y evitar que futuras modificaciones de main cambien el comportamiento del entorno.
 
 | Elemento | Requisito o herramienta |
 |----------|-------------------------|
-| Lenguaje | Java |
-| Versión de Java |	Java 8 como versión objetivo; usaremos JDK 21 en el contenedor |
-| Gestor de dependencias |	Maven	|
-| Pruebas	| JUnit Jupiter, JUnit Pioneer y EasyMock, entre otras |
-| Compilación y tests |	Maven Compiler y Maven Surefire |
-| Dependencias del sistema | JDK y Maven |
+| Lenguaje | Python |
+| Versión de Python | Python 3.12 |
+| Gestor de dependencias | pip |
+| Sistema de construcción | setuptools |
+| Ejecutor de tests	| pytest |
+| Automatización | GNU Make |
+| Dependencias de desarrollo | `requirements-dev.txt` |
+| Sistema base | Linux(Debian Slim) |
+
+
+#### 3. Creamos el `Dockerfile` para instalar las dependecias necesarias.
+Creamos el `Dockerfile` para instalar las dependencias necesarias y para clonar el repositorio asi como ejecutar la bateria de pruebas
+
+```dockerfile
+
+FROM python:3.12-slim
+
+# Instalar herramientas del sistema
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    make \
+    ca-certificates \
+    && rm -rf /var/lib/apt/lists/*
+
+# Directorio de trabajo
+WORKDIR /opt
+
+# Descargar versión concreta del proyecto
+RUN git clone --depth 1 --branch v2.34.2 \
+    https://github.com/psf/requests.git
+
+WORKDIR /opt/requests
+
+# Instalar dependencias de desarrollo y testing
+RUN python -m pip install --upgrade pip \
+    && make
+
+# Ejecutar la batería de pruebas
+CMD ["make", "ci"]
+
+```
+#### 4. Contruimos la imagen y ejecutamos los test
+
+Una vez que ya hemos creado el Dockerfile lanzamos el siguiente comando para construir la imagen docker, teniendo en cuenta que estamos dentro del directorio, que hemos aislado previamente del proyecto, junto con el docker file.
+```bash
+docker build -t requests-tests .
+```
+Y lanzamos la ejecución del contenedor, de manera que cuando termine de ejecutarse, se elimine el contenedor
+```bash
+docker run --rm requests-tests
+```
+Y obtenemos el siguiente resultado.
+
+```bash
+----------------- generated xml file: /opt/requests/report.xml -----------------
+====== 617 passed, 15 skipped, 1 xfailed, 18 warnings in 81.77s (0:01:21) ======
+```
+De manera que los tests se han ejecutado correctamente, donde se han omitodo 15 tests y se ha generado 1 fallo esperado en la bateria de tests, por lo que se considera que el contenedor ha pasado todos los tests de la manera que se esperaba.
